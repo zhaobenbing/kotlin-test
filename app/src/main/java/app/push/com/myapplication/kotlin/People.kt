@@ -34,11 +34,23 @@ class Truck : Car() {
 
 }
 
+open class A
+
+open class B : A()
+
+open class C : B()
 
 
+var mutableList: MutableList<B> = mutableListOf(B(), B(), C())
+
+var list: List<A> = mutableList
 
 
-
+class TypeArray<in A> {
+    fun getHashCode(a: A): Int? {
+        return a?.hashCode()
+    }
+}
 
 
 

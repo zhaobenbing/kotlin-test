@@ -70,6 +70,12 @@ class Test7 constructor(name: String) : Test5(name) {
     }
 }
 
+fun getStringLength(obj: Any): Int? {
+    if (obj is String) {
+        return obj?.length
+    }
+    return null
+}
 
 
 
